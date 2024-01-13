@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-table
+      author: tornado7222
+      changes:
+        - sqlFile:
+            path: create-user-table.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: add-columns-to-user-table
+      author: tornado7222
+      changes:
+        - addColumn:
+            tableName: 'user'
+            columns:
+              - column:
+                  name: last_password_updated
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: submission_blocked
+                  type: bool
+                  constraints:
+                    nullable: false

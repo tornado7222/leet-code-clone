@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5435/postgres
+    password: pp
+    username: pu
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  application:
+    name: leet-code-clone
+leet-code-clone:
+  sms:
+    eskiz:
+      token: Bearer fsdhjkddfkjfkj
